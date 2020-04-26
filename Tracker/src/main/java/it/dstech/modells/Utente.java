@@ -1,26 +1,25 @@
 package it.dstech.modells;
 
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Utente {
 	
+	@Id
+	private String username;
 	private String nome;
 	private String cognome;
 	private int eta;
 	private String email;
 	private String pass;
-	private String username;
 	private String Tipo;
 	private String imageUtente;
 	
 	
 	
-	public Utente(String nome, String cognome, int eta, String email, String pass, String username) {
-		super();
-		this.nome = nome;
-		this.cognome = cognome;
-		this.eta = eta;
-		this.email = email;
-		this.pass = pass;
-		this.username = username;
+	public Utente() {
 	}
 	
 	public String getNome() {
@@ -68,8 +67,8 @@ public class Utente {
 	public String getImageUtente() {
 		return imageUtente;
 	}
-	public void setImageUtente(String imageUtente) {
-		this.imageUtente = imageUtente;
+	public void setImageUtente(String inputStream) {
+		this.imageUtente = inputStream;
 	}
 	
 	

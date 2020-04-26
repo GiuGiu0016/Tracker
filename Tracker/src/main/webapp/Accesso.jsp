@@ -9,10 +9,10 @@
 </head>
 <body>
       <div class="pre_contenitore">
-			<p>Register</p>
+			<p>Login</p>
 		</div>
 		<div class="contenitore">
-			<form action="login.php" method="post">
+			<form action="accesso" method="post">
 				<p>Inserisci le tue credenziali</p>
 					<p>
 						<label>USERNAME</label><br>
@@ -24,6 +24,11 @@
 					</p>
 						<input type="submit" name="btn">
 			</form>
+			
+			<form action="home.jsp" method="post" enctype="multipart/form-data">
+					<input type="submit" name="btn" value="Indietro">
+			</form>
+			
 		</div>
 
 </body>

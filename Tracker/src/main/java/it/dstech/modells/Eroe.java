@@ -1,16 +1,17 @@
 package it.dstech.modells;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Eroe {
-	
+	@Id
 	private String nome;
 	private String image;
 	private String potereEroe;
+	private String fazione;
 	
-	public Eroe(String nome, String image, String potereEroe) {
-		super();
-		this.nome = nome;
-		this.image = image;
-		this.potereEroe = potereEroe;
+	public Eroe() {
 	}
 	public String getNome() {
 		return nome;
@@ -29,6 +30,12 @@ public class Eroe {
 	}
 	public void setPotereEroe(String potereEroe) {
 		this.potereEroe = potereEroe;
+	}
+	public String getFazione() {
+		return fazione;
+	}
+	public void setFazione(String fazione) {
+		this.fazione = fazione;
 	}
 
 	

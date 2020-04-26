@@ -21,10 +21,11 @@
 
 
 body{
-	background-image: url("https://d2skuhm0vrry40.cloudfront.net/2020/articles/2020-04-14-14-06/call-of-duty-warzone-dice-addio-a-70-000-cheater-bannati-da-infinity-ward-1586869560266.jpg/EG11/thumbnail/750x422/format/jpg/quality/60");
+	background-image: url("https://wallpaperaccess.com/full/391141.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
+	padding: 100px;
 	text-align: center;
 }
 
@@ -34,7 +35,7 @@ body{
 	  border:1px solid black;
 	  margin:auto;
 	  width: 320px;
-      height: 300px;
+      height: 350px;
       border-radius: 0px 0px 40px 40px;
       padding:20px;
       background-color:rgba(0,0,0,0.8);
@@ -52,7 +53,7 @@ body{
     height: 30px;
 
 }
-.contenitore input[type="text"], input[type="password"], input[type="number"], input[type="file"] /* i css si riferiscono solo alla barra ditesto */
+.contenitore input[type="text"], input[type="password"], input[type="number"], input[type="file"] ,input[type="email"]/* i css si riferiscono solo alla barra ditesto */
 {
     border: none;
     border-bottom: 1px solid #fff;

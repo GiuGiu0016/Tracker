@@ -8,11 +8,17 @@
 <link rel="stylesheet" href="static/Register.css">
 </head>
 <body>
+<%
+	String messaggio = (String) request.getAttribute("messaggio");
+	if (messaggio != null) {
+%>
+	<h3 style="color: red;"><%=messaggio%>	</h3>
+<%	} %>
       <div class="pre_contenitore">
 			<p>Register</p>
 		</div>
 		<div class="contenitore">
-			<form action="login.php" method="post">
+			<form action="register" method="post" enctype="multipart/form-data">
 				<p>Inserisci le tue credenziali</p>
 					<p>
 						<label>USERNAME</label><br>
@@ -28,7 +34,7 @@
 					</p>
 					<p>
 						<label>EMAIL</label><br>
-							<input type="text" name="email" class="email" placeholder="email@gmail.com">
+							<input type="email" name="email" class="email" placeholder="email@gmail.com">
 					</p>
 					<p>
 						<label>ETA</label><br>
@@ -44,6 +50,11 @@
 					</p>
 						<input type="submit" name="btn">
 			</form>
+			
+			<form action="home.jsp" method="post" enctype="multipart/form-data">
+					<input type="submit" name="btn" value="Indietro">
+			</form>
+			
 		</div>
 
 </body>

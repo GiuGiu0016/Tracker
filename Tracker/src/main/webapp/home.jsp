@@ -10,13 +10,11 @@
 <body>
 <%
 	String messaggio = (String) request.getAttribute("messaggio");
-	String messaggio2 = (String) request.getAttribute("messaggio2");
 	if (messaggio != null) {
 %>
-	  <h1>Errore</h1>
-		<h2>Non puoi accedere manualmete alla pagina.</h2>
+	<h3 style="color: red;"><%=messaggio%>	</h3>
+<%	} %>
 
-<%}else{%>
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
@@ -53,8 +51,8 @@
     Happy Clients
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">150+</span><br>
-    Meetings
+    <span class="w3-xlarge">300+<br>
+    Contest Match
   </div>
 </div>
 <!-- Footer -->
@@ -62,6 +60,6 @@
   <a href="#home" class="w3-button w3-light-	"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <p>Powered by <a href="https://www.instagram.com/thefinalplayer_psn/" title="TheFinalPlayer_PSN" target="_blank" class="w3-hover-text-green">TheFinalPlayer_PSN</a></p>
 </footer>
- <%}%>
+
 </body>
 </html>

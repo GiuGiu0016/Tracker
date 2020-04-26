@@ -1,15 +1,16 @@
 package it.dstech.modells;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class ArmaPreferita {
 	
+	@Id
 	private String nome;
 	private int danno;
 	private int colpiAlSecondo;
-	public ArmaPreferita(String nome, int danno, int colpiAlSecondo) {
-		super();
-		this.nome = nome;
-		this.danno = danno;
-		this.colpiAlSecondo = colpiAlSecondo;
+	public ArmaPreferita() {
 	}
 	public String getNome() {
 		return nome;

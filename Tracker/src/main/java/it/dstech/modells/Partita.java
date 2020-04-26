@@ -1,24 +1,30 @@
 package it.dstech.modells;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class Partita {
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long idPartita;
+	private String dataTime;
 	private int numeroKill;
 	private int numeroMorti;
+	@ManyToOne
 	private ArmaPreferita armaPreferita;
 	private double rateo;
+	@ManyToOne
 	private Eroe eroeUsatoMaggiormente;
 	private String note;
 	private int posizionePodio;
-	public Partita(int numeroKill, int numeroMorti, ArmaPreferita armaPreferita, double rateo,
-			Eroe eroeUsatoMaggiormente, String note, int posizionePodio) {
-		super();
-		this.numeroKill = numeroKill;
-		this.numeroMorti = numeroMorti;
-		this.armaPreferita = armaPreferita;
-		this.rateo = rateo;
-		this.eroeUsatoMaggiormente = eroeUsatoMaggiormente;
-		this.note = note;
-		this.posizionePodio = posizionePodio;
+	@ManyToOne
+	private Utente u;
+	public Partita() {
+
 	}
 	public int getNumeroKill() {
 		return numeroKill;
@@ -61,6 +67,24 @@ public class Partita {
 	}
 	public void setPosizionePodio(int posizionePodio) {
 		this.posizionePodio = posizionePodio;
+	}
+	public String getData() {
+		return dataTime;
+	}
+	public void setData(String data) {
+		this.dataTime = data;
+	}
+	public long getIdPartita() {
+		return idPartita;
+	}
+	public void setIdPartita(long idPartita) {
+		this.idPartita = idPartita;
+	}
+	public Utente getU() {
+		return u;
+	}
+	public void setU(Utente u) {
+		this.u = u;
 	}
 	
 	
